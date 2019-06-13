@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Mystery+Quest&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Dokdo|Keania+One&display=swap" rel="stylesheet">
+    <title>Food Fun Trivia</title>
+</head>
+
+<body background="assets/images/bananas.png">
+    <wrapper>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 mb-3 card bg-danger text-center text-white">
+                <h1>Food Fun Trivia</h1>
+                <h4>You "butter" believe it!</h4>
+                <div class="row mb-3">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <button type="button" id="startgamebtn" class="btn btn-primary btn-lg">Start Game</button></div>
+                    <div class="col-md-4"></div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <hr>
+        <div id=gamescreen>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4 mb-3 card bg-success text-center text-white">
+                    <h5>Time Remaining: <span id="timeremain"> </span> seconds...</h5>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 mb-3 card bg-primary text-center text-white">
+                    <h2>Let's see what you know!</h2>
+                    <div id="q1" class="qa card mb-3 text-white bg-primary text text-center">
+                        <div>What is the most stolen food in the world?</div>
+                        <br>
+                        <span> <input type="radio" name="q1a" value="1"> Beer
+                            <input type="radio" name="q1a" value="2"> Cheese
+                            <input type="radio" name="q1a" value="3"> Pizza </span>
+                    </div>
+                    <div id="q2" class="qa card mb-3 text-white bg-primary text text-center">
+                        <div>Which of the following is a berry?</div>
+                        <br>
+
+                        <span> <input type="radio" name="q2a" value="1"> Banana
+                            <input type="radio" name="q2a" value="2"> Strawberry
+                            <input type="radio" name="q2a" value="3"> Apple </span>
+                    </div>
+                    <div id="q3" class="qa card mb-3 text-white bg-primary text text-center">
+                        <div>One of these foods can spontaneously combust when gathered in large groups? Which one hates crowds?</div>
+                        <br>
+                        <span> <input type="radio" name="q3a" value="1"> Coffee Beans
+                            <input type="radio" name="q3a" value="2"> Pistachios
+                            <input type="radio" name="q3a" value="3"> Oranges </span>
+                    </div>
+                    <div id="q4" class="qa card mb-3 text-white bg-primary text text-center">
+                        <div>Which one was invented by a gambling addict?</div>
+                        <br>
+                        <span> <input type="radio" name="q4a" value="1"> Sandwich
+                            <input type="radio" name="q4a" value="2"> Potato Chips
+                            <input type="radio" name="q4a" value="3"> Queso Dip </span>
+                    </div>
+                    <div id="q5" class="qa card mb-3 text-white bg-primary text text-center">
+                        <div>Loud music can make you drink...</div>
+                        <br>
+                        <span> <input type="radio" name="q5a"  value="1"> Alcohol
+                            <input type="radio" name="q5a" value="2"> more and faster
+                            <input type="radio" name="q5a" value="3"> anything... </span>
+                    </div>
+                    <div id="q6" class="qa card mb-3 text-white bg-primary text text-center">
+                        <div>"You can't overcook me!" Which food made this true statement in it's latest interview?</div>
+                        <br>
+                        <span> <input type="radio" name="q6a" value="1"> Onions
+                            <input type="radio" name="q6a" value="2"> Mushrooms
+                            <input type="radio" name="q6a" value="3"> Spartacus </span>
+                    </div>
+                    <div id="q7" class="qa card mb-3 text-white bg-primary text text-center">
+                        <div>What percentage of the world's hazelnuts are used to make Nutella?</div>
+                        <br>
+                        <span> <input type="radio" name="q7a" value="1"> 10%
+                            <input type="radio" name="q7a" value="2"> 15%
+                            <input type="radio" name="q7a" value="3"> 25% </span>
+                    </div>
+                    <div id="q8" class="qa card mb-3 text-white bg-primary text text-center">
+                        <div>If the world suddenly had no flies, we would have no...</div>
+                        <br>
+                        <span> <input type="radio" name="q8a" value="1"> Oranges
+                            <input type="radio" name="q8a" value="2"> Chocolate
+                            <input type="radio" name="q8a" value="3"> Pepperoni </span>
+                    </div>
+
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+        <hr>
+        <div id=results>
+            <div class="row mb-3">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 mb-3 card bg-success text-center text-white">
+                    <h2>RESULTS</h2>
+                    <div class="qa row mb-3">
+                        <div class="col-md-4 mb-3 card bg-info text-center text-white">Correct: <div id="correcttotal">
+                                placeholder</div>
+                        </div>
+                        <div class="col-md-4 mb-3 card bg-info text-center text-white">Incorrect: <div
+                                id="incorrecttotal">placeholder</div>
+                        </div>
+                        <div class="col-md-4 mb-3 card bg-info text-center text-white">Unanswered: <div
+                                id="unansweredtotal">placeholder</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+
+            </div>
+            <div class="qa row mb-3">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8 mb-3 card bg-success text-center text-white">
+                        <h2>Find these facts and more! <a href="https://www.boredpanda.com/interesting-food-facts-lorcan-fearon/?utm_source=google&utm_medium=organic&utm_campaign=organic">More Food Facts</a></h2>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+    
+                </div>
+
+        </div>
+
+    </wrapper>
+</body>
+<script src="assets/javascript/app.js"></script>
+
+</html>
