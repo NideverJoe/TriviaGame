@@ -24,23 +24,26 @@
 
 <body background="assets/images/bananas.png">
     <wrapper>
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8 mb-3 card bg-danger text-center text-white">
-                <h1>Food Fun Trivia</h1>
-                <h4>You "butter" believe it!</h4>
-                <div class="row mb-3">
-                    <div class="col-md-4"></div>
-                    <div class="col-md-4">
-                        <button type="button" id="startgamebtn" class="btn btn-primary btn-lg">Start Game</button></div>
-                    <div class="col-md-4"></div>
-                </div>
-            </div>
-            <div class="col-md-2"></div>
-        </div>
-        <hr>
-        <div id=gamescreen>
+        <div id="initialscreen">
             <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 mb-3 card bg-danger text-center text-white">
+                    <h1>Food Fun Trivia</h1>
+                    <h4>You "butter" believe it!</h4>
+                    <div class="row mb-3">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4">
+                            <button type="button" id="startgamebtn" class="btn btn-primary btn-lg">Start Quiz</button>
+                        </div>
+                        <div class="col-md-4"></div>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+        <br>
+        <div id=gamescreen>
+            <div class="row fixed-top">
                 <div class="col-md-4"></div>
                 <div class="col-md-4 mb-3 card bg-success text-center text-white">
                     <h5>Time Remaining: <span id="timeremain"> </span> seconds...</h5>
@@ -67,7 +70,8 @@
                             <input type="radio" name="q2a" value="3"> Apple </span>
                     </div>
                     <div id="q3" class="qa card mb-3 text-white bg-primary text text-center">
-                        <div>One of these foods can spontaneously combust when gathered in large groups? Which one hates crowds?</div>
+                        <div>One of these foods can spontaneously combust when gathered in large groups? Which one hates
+                            crowds?</div>
                         <br>
                         <span> <input type="radio" name="q3a" value="1"> Coffee Beans
                             <input type="radio" name="q3a" value="2"> Pistachios
@@ -83,12 +87,13 @@
                     <div id="q5" class="qa card mb-3 text-white bg-primary text text-center">
                         <div>Loud music can make you drink...</div>
                         <br>
-                        <span> <input type="radio" name="q5a"  value="1"> Alcohol
-                            <input type="radio" name="q5a" value="2"> more and faster
+                        <span> <input type="radio" name="q5a" value="1"> Alcohol
+                            <input type="radio" name="q5a" value="2"> MORE and FASTER
                             <input type="radio" name="q5a" value="3"> anything... </span>
                     </div>
                     <div id="q6" class="qa card mb-3 text-white bg-primary text text-center">
-                        <div>"You can't overcook me!" Which food made this true statement in it's latest interview?</div>
+                        <div>"You can't overcook me!" Which food made this true statement in it's latest interview?
+                        </div>
                         <br>
                         <span> <input type="radio" name="q6a" value="1"> Onions
                             <input type="radio" name="q6a" value="2"> Mushrooms
@@ -113,36 +118,46 @@
                 <div class="col-md-2"></div>
             </div>
         </div>
-        <hr>
-        <div id=results>
+        <br>
+        <div id=resultscreen>
             <div class="row mb-3">
                 <div class="col-md-2"></div>
                 <div class="col-md-8 mb-3 card bg-success text-center text-white">
                     <h2>RESULTS</h2>
-                    <div class="qa row mb-3">
-                        <div class="col-md-4 mb-3 card bg-info text-center text-white">Correct: <div id="correcttotal">
+                    <div class="col-md-2"></div>
+
+                    <div class="qa row mb-1">
+                        <div class="col-md-4 mb-1 card bg-info text-center text-white">Correct: <div id="correcttotal">
                                 placeholder</div>
                         </div>
-                        <div class="col-md-4 mb-3 card bg-info text-center text-white">Incorrect: <div
+                        <div class="col-md-4 mb-1 card bg-info text-center text-white">Incorrect: <div
                                 id="incorrecttotal">placeholder</div>
                         </div>
-                        <div class="col-md-4 mb-3 card bg-info text-center text-white">Unanswered: <div
+                        <div class="col-md-4 mb-1 card bg-info text-center text-white">Unanswered: <div
                                 id="unansweredtotal">placeholder</div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-2"></div>
-
-            </div>
-            <div class="qa row mb-3">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-8 mb-3 card bg-success text-center text-white">
-                        <h2>Find these facts and more! <a href="https://www.boredpanda.com/interesting-food-facts-lorcan-fearon/?utm_source=google&utm_medium=organic&utm_campaign=organic">More Food Facts</a></h2>
+                    <br>
+                    <div class="qa row mb-1">
+                        <div class="col-md-12">
+                            <button type="button" id="startagaingamebtn" class="btn btn-primary btn-lg">Restart
+                                Quiz</button>
                         </div>
                     </div>
-                    <div class="col-md-2"></div>
-    
                 </div>
+            </div>
+            <div class="qa row mb-3">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 mb-3 card bg-success text-center text-white">
+                    <h2>Find these facts and more! <p><a
+                                href="https://www.boredpanda.com/interesting-food-facts-lorcan-fearon/?utm_source=google&utm_medium=organic&utm_campaign=organic">More
+                                Food Facts</a></h2>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+
+        </div>
 
         </div>
 
