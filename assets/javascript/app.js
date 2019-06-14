@@ -32,6 +32,8 @@ var q5a = 0;
 var q6a = 0;
 var q7a = 0;
 var q8a = 0;
+var audiowin = new Audio("assets/win.mp3");
+var audiolose = new Audio("assets/lose.mp3");
 
 function checkanswers() {
     q1a = $("input[name='q1a']:checked").val();
@@ -176,6 +178,11 @@ function gameend() {
     $("#unansweredtotal").text(unanswered);
     $("#percentage").text(resultscore);
     resultsdisplay();
+    if (totalscore >= 7) {
+        audiowin.play();
+    } else if (totalscore<=6) {
+    audiolose.play();
+    }
 }
 
 function resetgame() {
